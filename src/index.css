@@ -1,0 +1,84 @@
+:root {
+  --bg: #0e0a07;
+  --spot-1: #2a1a08;
+  --spot-2: #1a1208;
+  --accent: #d4891a;
+  --accent-2: #c45c1a;
+  --text: #f5ecd7;
+  --text-muted: #9a8a72;
+
+  --surface: rgba(20, 12, 4, 0.7);
+  --surface-border: rgba(212, 137, 26, 0.2);
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+
+  --radius: 18px;
+  --radius-sm: 12px;
+  --container: 1120px;
+  --pad: 24px;
+
+  --font-body: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-display: Syne, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  color-scheme: dark;
+  font: 16px/1.55 var(--font-body);
+  letter-spacing: 0.2px;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 137, 26, 0.6);
+  text-underline-offset: 0.25em;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(212, 137, 26, 0.8);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(212, 137, 26, 0.25);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
