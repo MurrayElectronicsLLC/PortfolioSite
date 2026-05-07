@@ -209,12 +209,13 @@ function App() {
                   <div className={styles.projectTitle}>Clear Flow Plumbing</div>
                   <div className={styles.projectTag}>Local Business · Branding Website</div>
                 </div>
-                <div className={styles.previewViewportClearFlow}>
-                  <iframe
-                    className={styles.previewIframe}
-                    src="https://clear-flow-mock-website-portfolio.vercel.app/"
-                    title="Clear Flow Plumbing preview"
+                <div className={styles.projectPreviewWrap}>
+                  <img
+                    className={styles.projectPreviewImg}
+                    src="/projects/clear-flow.png"
+                    alt="Clear Flow Plumbing preview"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className={styles.cardText}>
@@ -236,14 +237,6 @@ function App() {
                   >
                     Live Demo
                   </a>
-                  <a
-                    className={styles.mobileOnlyLink}
-                    href="https://clear-flow-mock-website-portfolio.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Live Site →
-                  </a>
                   {/* REPLACE WITH DEPLOYED URL */}
                   <a className={styles.projectLink} href="#" target="_blank" rel="noreferrer">
                     GitHub
@@ -263,12 +256,13 @@ function App() {
                   <div className={styles.projectTitle}>Evergreen General Hospital</div>
                   <div className={styles.projectTag}>Healthcare · Service-Focused Website</div>
                 </div>
-                <div className={styles.previewViewportEvergreen}>
-                  <iframe
-                    className={styles.previewIframe}
-                    src="https://ever-green-hospital-mock-website.vercel.app/"
-                    title="Evergreen General Hospital preview"
+                <div className={styles.projectPreviewWrap}>
+                  <img
+                    className={styles.projectPreviewImg}
+                    src="/projects/evergreen.png"
+                    alt="Evergreen General Hospital preview"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className={styles.cardText}>
@@ -290,14 +284,6 @@ function App() {
                   >
                     Live Demo
                   </a>
-                  <a
-                    className={styles.mobileOnlyLink}
-                    href="https://ever-green-hospital-mock-website.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Live Site →
-                  </a>
                   {/* REPLACE WITH DEPLOYED URL */}
                   <a className={styles.projectLink} href="#" target="_blank" rel="noreferrer">
                     GitHub
@@ -317,12 +303,13 @@ function App() {
                   <div className={styles.projectTitle}>Nexus</div>
                   <div className={styles.projectTag}>SaaS · Product Marketing Site</div>
                 </div>
-                <div className={styles.previewViewportNexus}>
-                  <iframe
-                    className={styles.previewIframe}
-                    src="https://3rd-port-site.vercel.app/"
-                    title="Nexus preview"
+                <div className={styles.projectPreviewWrap}>
+                  <img
+                    className={styles.projectPreviewImg}
+                    src="/projects/nexus.png"
+                    alt="Nexus preview"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className={styles.cardText}>
@@ -343,14 +330,6 @@ function App() {
                     rel="noreferrer"
                   >
                     Live Demo
-                  </a>
-                  <a
-                    className={styles.mobileOnlyLink}
-                    href="https://3rd-port-site.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Live Site →
                   </a>
                   {/* REPLACE WITH DEPLOYED URL */}
                   <a className={styles.projectLink} href="#" target="_blank" rel="noreferrer">
