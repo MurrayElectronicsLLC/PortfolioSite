@@ -155,42 +155,164 @@ function App() {
               and a launch that's ready to drive business growth.
             </p>
 
-            <div className={styles.cards}>
-              <article className={styles.card}>
-                <h3 className={styles.h3}>Portfolio sites</h3>
+            <div className={styles.pricingGrid} aria-label="Service tiers">
+              <article className={styles.tierCard}>
+                <div className={styles.tierTop}>
+                  <h3 className={styles.h3}>Template</h3>
+                </div>
+                <div className={styles.tierPrice}>
+                  <span className={styles.tierPriceLabel}>Starting at</span>
+                  <span className={styles.tierPriceValue}>$500</span>
+                </div>
                 <p className={styles.cardText}>
-                  A premium single-page portfolio that feels personal, loads fast, and converts.
+                  We consult, you share your vision, and we present you with a curated selection of
+                  templates built around your brand and goals.
                 </p>
                 <ul className={styles.bullets}>
-                  <li>Unique look & motion</li>
-                  <li>Projects + contact pipeline</li>
-                  <li>SEO basics + analytics-ready</li>
+                  <li>Consultation & discovery call</li>
+                  <li>Template selection & customization</li>
+                  <li>Mobile & desktop responsive</li>
+                  <li>Contact form setup</li>
+                  <li>Domain & deployment</li>
+                  <li>Basic SEO setup</li>
+                  <li>2 rounds of revisions</li>
                 </ul>
+                <button
+                  type="button"
+                  className={styles.tierCta}
+                  onClick={() => scrollToId('contact')}
+                >
+                  Book a Consultation
+                </button>
               </article>
 
-              <article className={styles.card}>
-                <h3 className={styles.h3}>Business websites</h3>
+              <article className={`${styles.tierCard} ${styles.tierCardPopular}`}>
+                <div className={styles.tierTop}>
+                  <h3 className={styles.h3}>Custom</h3>
+                  <span className={styles.badgeAmber}>Most Popular</span>
+                </div>
+                <div className={styles.tierPrice}>
+                  <span className={styles.tierPriceLabel}>Starting at</span>
+                  <span className={styles.tierPriceValue}>$900</span>
+                </div>
                 <p className={styles.cardText}>
-                  A small-business presence with strong UX, clear messaging, and crisp mobile
-                  performance.
+                  A fully custom build designed around your business. Ideal for retail, e-commerce,
+                  drop shipping, or anything that needs more than a standard presence.
                 </p>
                 <ul className={styles.bullets}>
-                  <li>Accessible + responsive</li>
-                  <li>Production security headers</li>
+                  <li>Everything in Template</li>
+                  <li>Unique design, built from scratch</li>
+                  <li>More complex layouts & functionality</li>
+                  <li>E-commerce & retail ready</li>
+                  <li>3–4 rounds of revisions depending on scope</li>
                 </ul>
+                <button
+                  type="button"
+                  className={styles.tierCta}
+                  onClick={() => scrollToId('contact')}
+                >
+                  Book a Consultation
+                </button>
               </article>
+            </div>
 
-              <article className={styles.card}>
-                <h3 className={styles.h3}>Front-end builds</h3>
-                <p className={styles.cardText}>
-                  Clean React components, modern styling, and a maintainable structure that scales.
-                </p>
-                <ul className={styles.bullets}>
-                  <li>Component-level CSS Modules</li>
-                  <li>Design tokens + consistency</li>
-                  <li>Performance-first delivery</li>
-                </ul>
-              </article>
+            <div className={styles.compareWrap} aria-label="Template vs Custom comparison">
+              <table className={styles.compareTable}>
+                <thead>
+                  <tr>
+                    <th scope="col">Feature</th>
+                    <th scope="col">Template</th>
+                    <th scope="col">Custom</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Consultation call</th>
+                    <td className={styles.cellYes}>✓</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mobile & desktop responsive</th>
+                    <td className={styles.cellYes}>✓</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Contact form</th>
+                    <td className={styles.cellYes}>✓</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Basic SEO</th>
+                    <td className={styles.cellYes}>✓</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Domain & deployment</th>
+                    <td className={styles.cellYes}>✓</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Template-based design</th>
+                    <td className={styles.cellYes}>✓</td>
+                    <td className={styles.cellDash}>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Custom design from scratch</th>
+                    <td className={styles.cellDash}>—</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">E-commerce ready</th>
+                    <td className={styles.cellDash}>—</td>
+                    <td className={styles.cellYes}>✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Revision rounds</th>
+                    <td>2</td>
+                    <td>3–4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className={styles.hostingWrap} aria-label="Hosting and maintenance plans">
+              <h3 className={styles.h3}>Hosting &amp; maintenance</h3>
+              <div className={styles.cards}>
+                <article className={styles.card}>
+                  <div className={styles.hostingTop}>
+                    <div className={styles.hostingName}>Basic</div>
+                    <div className={styles.hostingPrice}>$25/mo</div>
+                  </div>
+                  <p className={styles.cardText}>
+                    Covers the essentials to keep your site live, backed up, and running smoothly.
+                  </p>
+                </article>
+
+                <article className={styles.card}>
+                  <div className={styles.hostingTop}>
+                    <div className={styles.hostingName}>Standard</div>
+                    <div className={styles.hostingPrice}>$60/mo</div>
+                  </div>
+                  <p className={styles.cardText}>
+                    Everything in Basic, plus hands-on support for updates and ongoing performance.
+                  </p>
+                </article>
+
+                <article className={styles.card}>
+                  <div className={styles.hostingTop}>
+                    <div className={styles.hostingName}>Pro</div>
+                    <div className={styles.hostingPrice}>$120/mo</div>
+                  </div>
+                  <p className={styles.cardText}>
+                    Full ongoing support, regular check-ins, and priority access — for businesses
+                    that want consistent attention.
+                  </p>
+                </article>
+              </div>
+              <p className={styles.hostingNote}>
+                All hosting plans require an active site built or transferred through Murray
+                Electronics LLC. Custom plans available on request.
+              </p>
             </div>
           </div>
         </section>

@@ -369,6 +369,180 @@
   gap: 14px;
 }
 
+.pricingGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tierCard {
+  border-radius: var(--radius);
+  border: 1px solid rgba(212, 137, 26, 0.18);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.tierCardPopular {
+  border-color: rgba(212, 137, 26, 0.42);
+  box-shadow:
+    var(--shadow),
+    0 0 0 1px rgba(212, 137, 26, 0.14),
+    0 26px 90px rgba(212, 137, 26, 0.12);
+}
+
+.tierTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.badgeAmber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 137, 26, 0.28);
+  background: linear-gradient(135deg, rgba(212, 137, 26, 0.95), rgba(196, 92, 26, 0.95));
+  color: rgba(14, 10, 7, 0.96);
+  font: 800 12px/1 var(--font-body);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.tierPrice {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 137, 26, 0.16);
+  background: rgba(14, 10, 7, 0.35);
+}
+
+.tierPriceLabel {
+  font-size: 12px;
+  color: rgba(154, 138, 114, 0.98);
+}
+
+.tierPriceValue {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: rgba(212, 137, 26, 0.95);
+  font-size: 22px;
+}
+
+.tierCta {
+  margin-top: 2px;
+  appearance: none;
+  border: 1px solid rgba(212, 137, 26, 0.22);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font: 650 14px/1 var(--font-body);
+  cursor: pointer;
+  color: rgba(14, 10, 7, 0.96);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 20px 55px rgba(212, 137, 26, 0.18);
+  transition:
+    transform 120ms ease,
+    box-shadow 140ms ease;
+}
+
+.tierCta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 28px 70px rgba(212, 137, 26, 0.22);
+}
+
+.compareWrap {
+  margin-top: 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(212, 137, 26, 0.18);
+  background: rgba(14, 10, 7, 0.35);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  overflow: auto;
+}
+
+.compareTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.compareTable thead th {
+  text-align: left;
+  padding: 12px 14px;
+  background: rgba(212, 137, 26, 0.16);
+  color: rgba(245, 236, 215, 0.92);
+  font: 750 12px/1 var(--font-body);
+  letter-spacing: 0.2px;
+}
+
+.compareTable tbody th,
+.compareTable tbody td {
+  padding: 12px 14px;
+  border-top: 1px solid rgba(212, 137, 26, 0.14);
+  color: rgba(245, 236, 215, 0.82);
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.compareTable tbody th {
+  font-weight: 650;
+}
+
+.cellYes {
+  color: rgba(212, 137, 26, 0.95);
+  font-weight: 800;
+}
+
+.cellDash {
+  color: rgba(154, 138, 114, 0.98);
+  font-weight: 700;
+}
+
+.hostingWrap {
+  margin-top: 18px;
+}
+
+.hostingTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.hostingName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: rgba(245, 236, 215, 0.92);
+}
+
+.hostingPrice {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: rgba(212, 137, 26, 0.95);
+}
+
+.hostingNote {
+  margin: 12px 0 0;
+  color: rgba(154, 138, 114, 0.98);
+  max-width: 90ch;
+}
+
 .card,
 .projectCard,
 .aboutCard,
@@ -617,6 +791,12 @@
   .cards,
   .projectGrid {
     grid-template-columns: 1fr;
+  }
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+  .compareTable {
+    min-width: 520px;
   }
   .aboutGrid,
   .contactGrid {
