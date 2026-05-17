@@ -2,11 +2,18 @@ import { useMemo, useState } from 'react'
 import { isValidEmail, sanitizeText } from '../../lib/sanitize.js'
 import styles from './ContactForm.module.css'
 
-const FORM_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT
+const DEFAULT_FORM_ENDPOINT = 'https://formspree.io/f/mykopble'
+
+function resolveFormEndpoint() {
+  const raw = import.meta.env.VITE_FORMSPREE_ENDPOINT
+  if (typeof raw !== 'string') return DEFAULT_FORM_ENDPOINT
+  const trimmed = raw.trim().replace(/^['"]|['"]$/g, '')
+  return trimmed || DEFAULT_FORM_ENDPOINT
+}
+
+const FORM_ENDPOINT = resolveFormEndpoint()
 
 function ContactForm() {
-  const canSubmit = Boolean(FORM_ENDPOINT)
-
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
   const [error, setError] = useState('')
 
@@ -34,12 +41,6 @@ function ContactForm() {
     e.preventDefault()
     setError('')
 
-    if (!canSubmit) {
-      setStatus('error')
-      setError('Form endpoint not configured. Set VITE_FORMSPREE_ENDPOINT and redeploy.')
-      return
-    }
-
     if (!validation.ok) {
       setStatus('error')
       setError(validation.reason)
@@ -60,7 +61,6 @@ function ContactForm() {
           email: validation.values.email,
           message: validation.values.message,
           _subject: `${validation.values.subject} — Murray Electronics LLC`,
-          _gotcha: '',
         }),
       })
 
@@ -68,7 +68,7 @@ function ContactForm() {
         const data = await res.json().catch(() => null)
         const msg =
           data?.errors?.[0]?.message ||
-          'Message failed to send. Please try again in a moment.'
+          `Message failed to send (${res.status}). Please try again in a moment.`
         throw new Error(msg)
       }
 
@@ -147,7 +147,7 @@ function ContactForm() {
         <button
           className={styles.submit}
           type="submit"
-          disabled={!canSubmit || status === 'sending'}
+          disabled={status === 'sending'}
         >
           {status === 'sending'
             ? 'Sending…'
@@ -155,14 +155,7 @@ function ContactForm() {
               ? 'Request Consultation'
               : 'Request Consultation'}
         </button>
-        {!canSubmit ? (
-          <div className={styles.hint}>
-            Set <code className={styles.code}>VITE_FORMSPREE_ENDPOINT</code> to enable email
-            delivery.
-          </div>
-        ) : (
-          <div className={styles.hint}>Replies go directly to your inbox via Formspree.</div>
-        )}
+        <div className={styles.hint}>Replies go directly to your inbox via Formspree.</div>
       </div>
 
       <div className={styles.live} aria-live="polite">
@@ -179,4 +172,3 @@ function ContactForm() {
 }
 
 export default ContactForm
-
