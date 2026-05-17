@@ -523,6 +523,38 @@
   margin-top: 18px;
 }
 
+.hostingHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 12px 28px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.hostingHeader h3 {
+  margin-bottom: 0;
+}
+
+.hostingDisclaimers {
+  display: grid;
+  gap: 8px;
+}
+
+.hostingNote {
+  margin: 0;
+  color: rgba(154, 138, 114, 0.98);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.hostingFinePrint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(154, 138, 114, 0.82);
+  font-weight: 400;
+}
+
 .hostingTop {
   display: flex;
   align-items: baseline;
@@ -543,22 +575,6 @@
   font-weight: 800;
   letter-spacing: -0.2px;
   color: rgba(212, 137, 26, 0.95);
-}
-
-.hostingNote {
-  margin: 12px 0 0;
-  color: rgba(154, 138, 114, 0.98);
-  max-width: 90ch;
-}
-
-.hostingFinePrint {
-  margin: 8px auto 0;
-  max-width: 72ch;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.5;
-  color: rgba(154, 138, 114, 0.82);
-  font-weight: 400;
 }
 
 .card,
@@ -809,6 +825,10 @@
   .heroCard {
     margin-top: 0;
     margin-left: 0;
+  }
+  .hostingHeader {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   .cards,
   .projectGrid {
