@@ -138,7 +138,7 @@ function App() {
                         <div className={styles.profileHandle}>@dominickmurray</div>
                       </div>
                     </div>
-                    <div className={styles.profileRole}>Business Owner</div>
+                    <div className={styles.profileRole}>Owner</div>
                     {/* REPLACE WITH PHOTO */}
                   </div>
                 </div>
@@ -276,7 +276,20 @@ function App() {
             </div>
 
             <div className={styles.hostingWrap} aria-label="Hosting and maintenance plans">
-              <h3 className={styles.h3}>Hosting &amp; maintenance</h3>
+              <div className={styles.hostingHeader}>
+                <h3 className={styles.h3}>Hosting &amp; maintenance</h3>
+                <div className={styles.hostingDisclaimers}>
+                  <p className={styles.hostingNote}>
+                    All hosting plans require an active site built or transferred through Murray
+                    Electronics LLC. Custom plans available on request.
+                  </p>
+                  <p className={styles.hostingFinePrint}>
+                    Hosting rates are base pricing. High-traffic sites or projects requiring
+                    additional resources may be subject to adjusted pricing — discussed and agreed
+                    upon before any changes are made.
+                  </p>
+                </div>
+              </div>
               <div className={styles.cards}>
                 <article className={styles.card}>
                   <div className={styles.hostingTop}>
@@ -309,15 +322,6 @@ function App() {
                   </p>
                 </article>
               </div>
-              <p className={styles.hostingNote}>
-                All hosting plans require an active site built or transferred through Murray
-                Electronics LLC. Custom plans available on request.
-              </p>
-              <p className={styles.hostingFinePrint}>
-                Hosting rates are base pricing. High-traffic sites or projects requiring additional
-                resources may be subject to adjusted pricing — discussed and agreed upon before any
-                changes are made.
-              </p>
             </div>
           </div>
         </section>
