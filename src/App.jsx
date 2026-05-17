@@ -51,7 +51,7 @@ function App() {
             <span className={styles.brandMark} aria-hidden="true" />
             <div className={styles.brandText}>
               <div className={styles.brandName}>Murray Electronics LLC</div>
-              <div className={styles.brandMeta}>Solo web development • Morgantown, WV</div>
+              <div className={styles.brandMeta}>Web Developer</div>
             </div>
           </div>
 
@@ -91,7 +91,7 @@ function App() {
                 <p className={styles.lede}>
                   Hi, my name is Dominick, owner of Murray Electronics, based out of Morgantown, WV.
                   I build sites for businesses that are looking to expand their reach and grow their
-                  base. I recently graduated with an A.A.S in Information Systems and I'm continuing
+                  customer base. I recently graduated with an A.A.S in Information Systems and I'm continuing
                   toward a four-year degree. Every project is handled with complete care and
                   attention.
                 </p>
@@ -313,6 +313,11 @@ function App() {
                 All hosting plans require an active site built or transferred through Murray
                 Electronics LLC. Custom plans available on request.
               </p>
+              <p className={styles.hostingFinePrint}>
+                Hosting rates are base pricing. High-traffic sites or projects requiring additional
+                resources may be subject to adjusted pricing — discussed and agreed upon before any
+                changes are made.
+              </p>
             </div>
           </div>
         </section>
@@ -490,7 +495,6 @@ function App() {
                   <li>Design systems that stay consistent under growth</li>
                   <li>Accessible, responsive layout as a first-class feature</li>
                   <li>Security-minded defaults for a live public site</li>
-                  <li>Performance budget thinking</li>
                 </ul>
               </div>
             </div>
