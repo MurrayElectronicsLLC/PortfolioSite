@@ -91,9 +91,9 @@ function App() {
                 <p className={styles.lede}>
                   Hi, my name is Dominick, owner of Murray Electronics, based out of Morgantown, WV.
                   I build sites for businesses that are looking to expand their reach and grow their
-                  customer base. I recently graduated with an A.A.S in Information Systems and I'm continuing
-                  toward a four-year degree. Every project is handled with complete care and
-                  attention.
+                  customer base. I recently graduated with an A.A.S in Information Systems and plan on continuing
+                  my education with a Bachelor's degree. Every project receives the utmost care and
+                  precision.
                 </p>
                 <div className={styles.heroActions}>
                   <button
@@ -131,7 +131,7 @@ function App() {
                   <div className={styles.profileCard}>
                     <div className={styles.profileTop}>
                       <div className={styles.avatar} aria-hidden="true">
-                        <span className={styles.avatarText}>DM</span>
+                        <span className={styles.avatarText}>ME</span>
                       </div>
                       <div>
                         <div className={styles.profileName}>Murray Electronics LLC</div>
@@ -337,7 +337,7 @@ function App() {
             <div className={styles.projectGrid}>
               <article className={styles.projectCard}>
                 <div className={styles.projectTop}>
-                  <div className={styles.projectTitle}>Clear Flow Plumbing</div>
+                  <div className={styles.projectTitle}>Clear Flow</div>
                   <div className={styles.projectTag}>Local Business · Branding Website</div>
                 </div>
                 <div className={styles.projectPreviewWrap}>
@@ -384,7 +384,7 @@ function App() {
 
               <article className={styles.projectCard}>
                 <div className={styles.projectTop}>
-                  <div className={styles.projectTitle}>Evergreen General Hospital</div>
+                  <div className={styles.projectTitle}>General Hospital</div>
                   <div className={styles.projectTag}>Healthcare · Service-Focused Website</div>
                 </div>
                 <div className={styles.projectPreviewWrap}>
@@ -524,13 +524,6 @@ function App() {
                   <li>Pages/sections you need (and any examples you like)</li>
                   <li>Deadline + budget range</li>
                 </ul>
-                <div className={styles.notice}>
-                  <div className={styles.noticeTitle}>Security note</div>
-                  <div className={styles.noticeText}>
-                    This form submits directly to Formspree over HTTPS. No passwords or sensitive
-                    personal data, please.
-                  </div>
-                </div>
               </div>
             </div>
           </div>
