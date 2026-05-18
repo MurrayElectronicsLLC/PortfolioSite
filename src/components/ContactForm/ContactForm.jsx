@@ -155,7 +155,6 @@ function ContactForm() {
               ? 'Request Consultation'
               : 'Request Consultation'}
         </button>
-        <div className={styles.hint}>Replies go directly to your inbox via Formspree.</div>
       </div>
 
       <div className={styles.live} aria-live="polite">
@@ -163,9 +162,6 @@ function ContactForm() {
           <div className={styles.ok}>Message sent. I’ll reply soon.</div>
         ) : null}
         {status === 'error' ? <div className={styles.err}>{error}</div> : null}
-        {!validation.ok && status !== 'sending' && status !== 'sent' ? (
-          <div className={styles.validation}>{validation.reason}</div>
-        ) : null}
       </div>
     </form>
   )
