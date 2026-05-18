@@ -524,6 +524,9 @@ function App() {
                   <li>Pages/sections you need (and any examples you like)</li>
                   <li>Deadline + budget range</li>
                 </ul>
+                <p className={styles.contactNote}>
+                  You can expect a response within 48 hours — usually sooner on business days.
+                </p>
               </div>
             </div>
           </div>
