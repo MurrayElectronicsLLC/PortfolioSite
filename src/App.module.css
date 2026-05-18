@@ -733,11 +733,17 @@
   gap: 14px;
 }
 
-.contactNote {
-  margin: 14px 0 0;
-  color: rgba(154, 138, 114, 0.98);
+.contactAside {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(212, 137, 26, 0.16);
+}
+
+.contactAside .cardText {
+  margin: 0;
   font-size: 13px;
   line-height: 1.55;
+  color: rgba(245, 236, 215, 0.82);
 }
 
 .notice {
